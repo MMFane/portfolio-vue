@@ -1,17 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <title>Sam Yeager Web Dev Portfolio</title>
   </head>
   <body>
+    <a id="skip-to-content" class="skip-link" href="#main-content"
+      >Skip to content</a
+    >
+    <a id="skip-to-footer" class="skip-link" href="#footer  "
+      >Skip to contact</a
+    >
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong
+        >We're sorry but Sam Yeager's portfolio doesn't work properly without
+        JavaScript enabled. Please enable it to continue.</strong
+      >
     </noscript>
     <div id="app"></div>
-    <!-- built files will be auto injected -->
   </body>
 </html>
+
+<style>
+  html {
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -1000px;
+  }
+
+  .skip-link:focus {
+    left: 0;
+  }
+</style>
