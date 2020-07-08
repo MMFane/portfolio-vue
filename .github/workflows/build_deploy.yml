@@ -26,8 +26,9 @@ jobs:
         node-version: "10.13.0"
     - run: npm i
     - run: npm run build
-    - name: GitHub Pages action
-      uses: peaceiris/actions-gh-pages@v3.6.1
+    - name: GitHub Pages
+      uses: crazy-max/ghaction-github-pages@v2.1.0
       with:
-        publish_dir: "dist"
-    
+        # Build directory to deploy
+        build_dir: dist
+       
