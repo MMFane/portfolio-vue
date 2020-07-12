@@ -1,11 +1,7 @@
 <template>
-  <section
-    class="project"
-    :style="{ backgroundImage: `url(${img})` }"
-    @click="changeProject"
-  >
+  <button class="project" :style="{ backgroundImage: `url(${img})` }" @click="changeProject">
     <h2 class="title">{{ name }}</h2>
-  </section>
+  </button>
 </template>
 
 <script>
