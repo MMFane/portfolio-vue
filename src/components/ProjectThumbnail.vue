@@ -10,23 +10,23 @@ export default {
   methods: {
     changeProject() {
       this.$emit("changeProject", this.id);
-    },
+    }
   },
   props: {
     id: {
       type: Number,
-      required: true,
+      required: true
     },
     img: {
       type: String,
       default:
-        "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+        "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
     },
     name: {
       type: String,
-      default: "Project",
-    },
-  },
+      default: "Project"
+    }
+  }
 };
 </script>
 
