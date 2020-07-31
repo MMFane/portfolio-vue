@@ -1,12 +1,7 @@
 <template>
   <div class="rtable">
     <p class="title" v-if="data.title">{{ data.title }}</p>
-    <Table
-      v-if="!smallScreen"
-      :body="body"
-      :headers="headers"
-      :striped="striped"
-    />
+    <Table v-if="!smallScreen" :body="body" :headers="headers" :striped="striped" />
     <Cards v-else :body="body" :headers="headers" :striped="striped" />
   </div>
 </template>
@@ -17,13 +12,13 @@ export default {
   name: "responsive-table",
   components: {
     Cards,
-    Table,
+    Table
   },
   data() {
     return {
       body: this.data.body,
       headers: this.data.headers,
-      smallScreen: window.innerWidth <= this.threshold,
+      smallScreen: window.innerWidth <= this.threshold
     };
   },
   created() {
@@ -36,30 +31,30 @@ export default {
   methods: {
     handleResize() {
       this.smallScreen = window.innerWidth <= this.threshold;
-    },
+    }
   },
   props: {
     data: {
       type: Object,
-      default: {
-        test: "ing",
-        anohter: "stuff",
-      },
+      required: true
     },
     striped: {
       type: Boolean,
-      default: false,
+      default: false
     },
     threshold: {
       type: Number,
       default: 300
-  },
+    }
+  }
 };
 </script>
-<style>
+
+<style lang="css">
 .rtable p {
   margin: 0;
 }
+
 .rtable .title {
   padding: 2rem 0 0.5rem 0;
   color: var(--text-color-light);
@@ -67,6 +62,7 @@ export default {
   font-weight: bold;
   text-transform: capitalize;
 }
+
 .rtable {
   margin-bottom: 1rem;
   padding: 0 1rem;
