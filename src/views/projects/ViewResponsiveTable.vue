@@ -13,9 +13,9 @@
     <p class="title">Dogs (Normal Table)</p>
     <table>
       <thead>
-        <th v-for="header in data.headers">{{ header }}</th>
-        <tr v-for="row in data.body">
-          <td v-for="entry in row">{{ entry }}</td>
+        <th v-for="(header, index) in data.headers" :key="index">{{ header }}</th>
+        <tr v-for="(row, index) in data.body" :key="index">
+          <td v-for="(entry, index) in row" :key="index">{{ entry }}</td>
         </tr>
       </thead>
     </table>
