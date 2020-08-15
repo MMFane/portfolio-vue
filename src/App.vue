@@ -1,6 +1,6 @@
 <template>
   <main id="app">
-    <Nav />
+    <Header />
     <router-view id="main-content" />
     <Footer />
   </main>
@@ -8,13 +8,13 @@
 
 <script>
 import Footer from "@/components/Footer.vue";
-import Nav from "@/components/Nav.vue";
+import Header from "@/components/Header.vue";
 
 export default {
   name: "App",
   components: {
     Footer,
-    Nav,
+    Header,
   },
 };
 </script>
