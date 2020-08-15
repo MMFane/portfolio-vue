@@ -18,6 +18,7 @@ export default {
 footer {
   width: 100%;
   height: 50px;
+  line-height: 50px;
   display: flex;
   justify-content: space-around;
   background-color: rgba(0, 0, 0, 0.25);

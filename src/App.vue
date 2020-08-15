@@ -33,7 +33,6 @@ export default {
 #main-content {
   margin: 1rem 0;
   padding: 1rem 0;
-  border: 1px solid black;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
