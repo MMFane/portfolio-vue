@@ -21,6 +21,6 @@ footer {
   line-height: 50px;
   display: flex;
   justify-content: space-around;
-  background-color: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 -10px 10px var(--shadow);
 }
 </style>

@@ -20,6 +20,15 @@ export default {
 </script>
 
 <style>
+:root {
+  --dialog-light: #fcf7ff;
+  --shadow: rgba(37, 0, 59, 0.05);
+  --text: rgb(51, 0, 51);
+  --text-deemph: rgba(51, 0, 51, 0.75);
+  --link: #d96d0f;
+  --link-hover: #9c3600;
+}
+
 #app {
   width: 100%;
   min-height: 100vh;
@@ -28,6 +37,19 @@ export default {
   justify-content: space-between;
   align-content: center;
   font-family: Roboto, Arial, sans-serif;
+  color: var(--text);
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--link);
+}
+
+a:hover {
+  color: var(--link-hover);
+  padding-bottom: 0.25rem;
+
 }
 
 #main-content {

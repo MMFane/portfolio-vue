@@ -5,7 +5,7 @@
       <router-link to="/">Projects</router-link> |
       <router-link to="/resume">Resume</router-link> |
       <router-link to="/about">About</router-link>
-  </nav>
+    </nav>
   </header>
 </template>
 
@@ -21,6 +21,8 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem 0 2rem;
+  box-shadow: 0 10px 10px var(--shadow);
+}
 
  #name {
    font-size: 1.5rem;
