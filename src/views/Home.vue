@@ -1,5 +1,5 @@
 <template>
-  <section id="router-view">
+  <main id="router-view">
     <h1 id="title">Projects</h1>
     <transition name="fade" mode="out-in">
       <section v-if="!projectSelected" key="project-list">
@@ -22,7 +22,7 @@
         </section>
       </article>
     </transition>
-  </section>
+  </main>
 </template>
 
 <script>

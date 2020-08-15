@@ -1,12 +1,12 @@
 <template>
+  <header id="nav">
   <nav>
     <p>Samantha Yeager, Front End Web Developer</p>
-    <div>
       <router-link to="/">Projects</router-link> |
       <router-link to="/resume">Resume</router-link> |
       <router-link to="/about">About</router-link>
-    </div>
   </nav>
+  </header>
 </template>
 
 <script>
@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style scoped>
-nav {
+#nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
