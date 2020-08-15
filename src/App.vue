@@ -20,6 +20,7 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito');
 :root {
   --dialog-light: #fcf7ff;
   --shadow: rgba(37, 0, 59, 0.05);
@@ -36,7 +37,7 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   align-content: center;
-  font-family: Roboto, Arial, sans-serif;
+  font-family: Nunito, Arial, sans-serif;
   color: var(--text);
 }
 
