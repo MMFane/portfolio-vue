@@ -1,11 +1,11 @@
 <template>
-  <section id="footer">
+  <footer>
     <a href="mailto:sam.erin.yeager@gmail.com" target="_blank"
       >sam.erin.yeager@gmail.com</a
     >
     <a href="tel:740-591-7429">(740) 591-7429</a>
     <a href="">LinkedIn</a>
-  </section>
+  </footer>
 </template>
 
 <script>
@@ -15,11 +15,12 @@ export default {
 </script>
 
 <style>
-#footer {
+footer {
   width: 100%;
   height: 50px;
+  line-height: 50px;
   display: flex;
   justify-content: space-around;
-  background-color: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 -10px 10px var(--shadow);
 }
 </style>
