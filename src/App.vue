@@ -48,11 +48,12 @@ h1 {
   margin: 0 0 2rem 0;
 }
 
-h2, p, ul {
+h2, p {
   margin: 0 0 1.2rem 0;
 }
 
 h3 {
+  color: var(--text-deemph);
   margin: 0 0 0.8rem 0;
 }
 
@@ -61,6 +62,10 @@ p {
   padding: 1rem;
   border-radius: 10px;
   box-shadow: inset 0 5px 10px var(--shadow);
+}
+
+ul {
+  margin: 0;
 }
 
 #app {
