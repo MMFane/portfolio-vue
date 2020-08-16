@@ -4,12 +4,27 @@
     <h3>Concept</h3>
     <p>Tables don't work so well on small screens, so this one changes to a card style display for each table row on screens smaller than a set threshold. This way, related data remains visually connected, but also flexible</p>
     <h3>Properties</h3>
-    <ul>
-      <li>Data</li>
-      <li>Striped</li>
-      <li>Threshold</li>
-    </ul>
-    <ResponsiveTable :data="data" :threshold="450" :striped="true" />
+    <p>
+      <ul>
+        <li><b>Data</b> - JSON Object with the properties
+          <ul>
+            <li><b>Title</b> - Title for the entire table</li>
+            <li><b>Headers</b> - Headers for each table column</li>
+            <li><b>Body</b> - Array of arrays for each row</li>
+          </ul>
+         </li>
+        <li><b>Striped</b> - Boolean to set row stripes. Default false.</li>
+        <li><b>Threshold</b> - Integer to set screen size at which the table changes to cards. Default 300.</li>
+      </ul>
+    </p>
+    <h3>Play with the table below</h3>
+    <form>
+      <input type="checkbox" name="striped" v-model="striped"/>
+      <label for="striped">Striped?</label>
+      <label for="threshold">Threshold</label>
+      <input name="threshold" v-model.number="threshold"/>
+    </form>
+    <ResponsiveTable :data="data" :threshold="threshold" :striped="striped" />
     <h2>Dogs (Normal Table)</h2>
     <table>
       <thead>
@@ -41,7 +56,9 @@ export default {
           ["Frou Frou", "Havanese", "Left pink sock"],
           ["Miles", "Pitbull Mix", "A ragged chew toy"]
         ]
-      }
+      },
+      striped: true,
+      threshold: 450,
     };
   }
 };
