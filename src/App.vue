@@ -30,17 +30,6 @@ export default {
   --link-hover: #9c3600;
 }
 
-#app {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: center;
-  font-family: Nunito, Arial, sans-serif;
-  color: var(--text);
-}
-
 a {
   color: var(--link);
   text-decoration: none;
@@ -50,7 +39,17 @@ a {
 a:hover {
   color: var(--link-hover);
   padding-bottom: 0.25rem;
+}
 
+#app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  font-family: Nunito, Arial, sans-serif;
+  color: var(--text);
 }
 
 #main-content {
