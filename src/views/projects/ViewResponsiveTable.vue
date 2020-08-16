@@ -48,12 +48,14 @@ export default {
 </script>
 
 <style>
-:root {
-  --table-color-dark: lightblue;
+
+table {
+  background-color: var(--background-light);
+  border: 1px solid var(--background-med);
 }
 
-thead {
-  background-color: cyan;
+td {
+  border: 1px solid var(--shadow-med);
 }
 
 </style>
