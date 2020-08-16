@@ -23,7 +23,10 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Nunito');
 :root {
   --background-light: #fcf7ff;
+  --background-med: #c1adcc;
+  --background-dark: #7c5f8c;
   --shadow: rgba(37, 0, 59, 0.05);
+  --shadow-med: rgba(37, 0, 59, 0.1);
   --text: rgb(51, 0, 51);
   --text-deemph: rgba(51, 0, 51, 0.75);
   --link: #d96d0f;
@@ -45,11 +48,12 @@ h1 {
   margin: 0 0 2rem 0;
 }
 
-h2, p, ul {
+h2, p {
   margin: 0 0 1.2rem 0;
 }
 
 h3 {
+  color: var(--text-deemph);
   margin: 0 0 0.8rem 0;
 }
 
@@ -58,6 +62,10 @@ p {
   padding: 1rem;
   border-radius: 10px;
   box-shadow: inset 0 5px 10px var(--shadow);
+}
+
+ul {
+  margin: 0;
 }
 
 #app {

@@ -27,25 +27,29 @@ export default {
 <style>
 .rtable-table {
   border-collapse: collapse;
-  background-color: var(--table-color);
-  box-shadow: 0 3px 10px var(--shadow-color);
-}
-.rtable rtable-table {
+  box-shadow: 0 5px 15px var(--shadow-med);
   margin: 0 auto 1rem auto;
 }
-.rtable-table thead {
-  box-shadow: 0 0 5px var(--shadow-color);
+
+.rtable-table tr {
+  box-shadow: inset 0 0 5px var(--shadow);
 }
+
+.rtable-table tr:first-of-type {
+  box-shadow: inset 0 7px 5px var(--shadow-med);
+}
+
 .rtable-table th,
 .rtable-table td {
-  border-bottom: 1px solid var(--border-color);
   padding: 1rem 2rem;
   min-width: 50px;
 }
+
 .rtable-table th {
   text-align: left;
 }
-.rtable-table.striped tr:nth-of-type(even) {
-  background-color: var(--table-color-dark);
+
+.rtable-table.striped tr:nth-of-type(odd) {
+  background-color: var(--background-med);
 }
 </style>

@@ -58,7 +58,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem;
   box-shadow: 0 10px 10px var(--shadow);
 }
 
@@ -96,7 +96,6 @@ header {
   a.router-link {
     display: block;
     width: 100vh;
-    background-color: var(--shadow);
     text-align: center;
   }
 

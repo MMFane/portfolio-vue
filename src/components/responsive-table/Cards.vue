@@ -24,44 +24,52 @@ export default {
   },
 };
 </script>
+
 <style>
 .rtable-cards {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
-.rtable-cards.striped .card .row:nth-of-type(even) {
-  background-color: var(--table-color-dark);
+
+.rtable-cards p {
+  background-color: unset;
+  border-radius: 0;
+  box-shadow: none;
 }
+
 .rtable-cards .card {
-  display: flex;
-  flex-direction: column;
   flex-grow: 1;
+  min-width: 250px;
   position: relative;
-  width: 43%;
-  min-width: 200px;
   margin: 0.5rem;
-  background-color: var(--table-color);
+  background-color: var(--background-light);
 }
+
 .rtable-cards .row {
   display: flex;
-  flex-grow: 1;
-  position: relative;
+  border-bottom: 1px solid var(--shadow-med);
 }
-.rtable-cards .row:last-child {
-  border-bottom: none;
-}
+
 .rtable-cards .row * {
   padding: 0.5rem;
 }
+
 .rtable-cards .row .header {
   font-weight: bold;
 }
+
 .rtable-cards .head-shadow {
   position: absolute;
   width: 50%;
   height: 100%;
-  box-shadow: 0 0 5px var(--shadow-color);
+  box-shadow: 3px 0 7px var(--shadow-med);
 }
+
+.rtable-cards.striped .card .row:nth-of-type(odd) p.data {
+  background-color: var(--background-med);
+}
+
 .rtable-cards .row .data,
 .rtable-cards .row .header {
   flex-basis: 50%;
