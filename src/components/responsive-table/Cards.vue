@@ -29,6 +29,7 @@ export default {
 .rtable-cards {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .rtable-cards p {
@@ -39,6 +40,7 @@ export default {
 
 .rtable-cards .card {
   flex-grow: 1;
+  min-width: 250px;
   position: relative;
   margin: 0.5rem;
   background-color: var(--background-light);
