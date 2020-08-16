@@ -1,11 +1,16 @@
 <template>
   <header>
-    <p><span id="name">Samantha Yeager</span> <span id="job-title">Front End Developer</span></p>
-    <nav>
-      <router-link to="/">Projects</router-link> |
-      <router-link to="/resume">Resume</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="me">
+      <div id="name-title">
+        <span id="name">Samantha Yeager </span>
+        <span id="job-title">Front End Developer</span>
+      </div>
       <font-awesome-icon icon="bars" id="nav-collapse" @click="toggleNav" v-show="smallScreen"/>
+    </div>
+    <nav v-show="!smallScreen || isNavOpen">
+      <router-link class="router-link" to="/">Projects</router-link><span class="nav-divider"> |</span>
+      <router-link class="router-link" to="/resume">Resume</router-link><span class="nav-divider"> |</span>
+      <router-link class="router-link" to="/about">About</router-link>
     </nav>
   </header>
 </template>
@@ -21,6 +26,29 @@ export default {
   name: "Nav",
   components: {
     FontAwesomeIcon
+  },
+  data() {
+    return {
+      isNavOpen: false,
+      screenBreakpoint: 650,
+      smallScreen: window.innerWidth < this.screenBreakpoint
+    }
+  },
+  methods: {
+    resizeWindow() {
+      this.windowWidth = window.innerWidth;
+      this.smallScreen = window.innerWidth < this.screenBreakpoint;
+    },
+    toggleNav() {
+      this.isNavOpen = !this.isNavOpen;
+    }
+  },
+  created() {
+    window.addEventListener("resize", this.resizeWindow);
+    this.resizeWindow();
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.resizeWindow)
   },
 };
 </script>
