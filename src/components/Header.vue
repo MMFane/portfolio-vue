@@ -5,13 +5,23 @@
       <router-link to="/">Projects</router-link> |
       <router-link to="/resume">Resume</router-link> |
       <router-link to="/about">About</router-link>
+      <font-awesome-icon icon="bars" id="nav-collapse" @click="toggleNav" v-show="smallScreen"/>
     </nav>
   </header>
 </template>
 
 <script>
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faBars)
+
 export default {
   name: "Nav",
+  components: {
+    FontAwesomeIcon
+  },
 };
 </script>
 
