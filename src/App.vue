@@ -23,7 +23,10 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Nunito');
 :root {
   --background-light: #fcf7ff;
+  --background-med: #c1adcc;
+  --background-dark: #7c5f8c;
   --shadow: rgba(37, 0, 59, 0.05);
+  --shadow-med: rgba(37, 0, 59, 0.1);
   --text: rgb(51, 0, 51);
   --text-deemph: rgba(51, 0, 51, 0.75);
   --link: #d96d0f;
