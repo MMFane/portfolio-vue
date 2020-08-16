@@ -58,13 +58,23 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem 0 2rem;
+  padding: 1rem 1rem 0 1rem;
   box-shadow: 0 10px 10px var(--shadow);
 }
 
- #name {
-   font-size: 1.5rem;
+#me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#name {
+  font-size: 1.5rem;
   font-weight: 700;
+}
+
+#nav-collapse {
+  display: none;
 }
 
 #job-title {
@@ -72,4 +82,45 @@ header {
   color: var(--text-deemph);
   font-style: italic;
 }
+
+@media (max-width: 650px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  a.router-link {
+    display: block;
+    width: 100vh;
+    background-color: var(--shadow);
+    text-align: center;
+  }
+
+  a.router-link:first-of-type {
+    border-top: 1px solid var(--shadow);
+  }
+
+  #me {
+    width: 100%;
+  }
+
+  #me #name-title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #nav-collapse {
+    display: block;
+    justify-self: right;
+  }
+
+  .nav-divider {
+    display: none;
+  }
+}
+
 </style>
