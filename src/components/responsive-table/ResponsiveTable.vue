@@ -1,6 +1,6 @@
 <template>
   <div class="rtable">
-    <p class="title" v-if="data.title">{{ data.title }}</p>
+    <h2 v-if="data.title">{{ data.title }}</h2>
     <Table v-if="!smallScreen" :body="body" :headers="headers" :striped="striped" />
     <Cards v-else :body="body" :headers="headers" :striped="striped" />
   </div>
@@ -51,20 +51,11 @@ export default {
 </script>
 
 <style lang="css">
+.rtable {
+  margin-bottom: 2rem;
+}
+
 .rtable p {
   margin: 0;
-}
-
-.rtable .title {
-  padding: 2rem 0 0.5rem 0;
-  color: var(--text-color-light);
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-transform: capitalize;
-}
-
-.rtable {
-  margin-bottom: 1rem;
-  padding: 0 1rem;
 }
 </style>

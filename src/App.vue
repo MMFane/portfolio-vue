@@ -22,7 +22,7 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Nunito');
 :root {
-  --dialog-light: #fcf7ff;
+  --background-light: #fcf7ff;
   --shadow: rgba(37, 0, 59, 0.05);
   --text: rgb(51, 0, 51);
   --text-deemph: rgba(51, 0, 51, 0.75);
@@ -39,6 +39,25 @@ a {
 a:hover {
   color: var(--link-hover);
   padding-bottom: 0.25rem;
+}
+
+h1 {
+  margin: 0 0 2rem 0;
+}
+
+h2, p, ul {
+  margin: 0 0 1.2rem 0;
+}
+
+h3 {
+  margin: 0 0 0.8rem 0;
+}
+
+p {
+  background-color: var(--background-light);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: inset 0 5px 10px var(--shadow);
 }
 
 #app {

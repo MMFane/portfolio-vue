@@ -10,7 +10,7 @@
       <li>Threshold</li>
     </ul>
     <ResponsiveTable :data="data" :threshold="450" :striped="true" />
-    <p class="title">Dogs (Normal Table)</p>
+    <h2>Dogs (Normal Table)</h2>
     <table>
       <thead>
         <th v-for="(header, index) in data.headers" :key="`header-${index}`">{{ header }}</th>
@@ -56,12 +56,4 @@ thead {
   background-color: cyan;
 }
 
-p.title {
-  margin: 0;
-  padding: 2rem 0 0.5rem 0;
-  color: var(--text-color-light);
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-transform: capitalize;
-}
 </style>
