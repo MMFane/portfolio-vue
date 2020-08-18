@@ -31,7 +31,8 @@
           <input name="threshold" type="text" v-model.number="threshold"/>
         </label>
       </form>
-      <ResponsiveTable :data="data" :threshold="threshold" :striped="striped" />
+      <h3>Responsive Table</h3>
+      <ResponsiveTable :data="data" :header-level="4" :threshold="threshold" :striped="striped" />
       
       <h3>Non-Responsive Table</h3>
       <h4>Dogs</h4>
