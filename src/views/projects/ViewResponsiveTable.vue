@@ -35,17 +35,19 @@
       <ResponsiveTable :data="data" :header-level="4" :threshold="threshold" :striped="striped" />
       
       <h3>Non-Responsive Table</h3>
-      <h4>Dogs</h4>
-      <table>
-        <thead>
+      <div id="non-resp-table">
+        <h4>Dogs</h4>
+        <table>
+          <thead>
           <th v-for="(header, index) in data.headers" :key="`header-${index}`">{{ header }}</th>
         </thead>
         <tbody>
           <tr v-for="(row, index) in data.body" :key="`row-${index}`">
             <td v-for="(entry, index) in row" :key="`data-${index}`">{{ entry }}</td>
-          </tr>
-        </tbody>
-      </table>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
   </section>
 </template>
@@ -87,6 +89,12 @@ table {
 
 td {
   border: 1px solid var(--shadow-med);
+}
+
+#non-resp-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #table-form {
