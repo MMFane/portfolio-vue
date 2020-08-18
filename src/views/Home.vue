@@ -16,10 +16,8 @@
       </section>
       <article id="project" v-else key="project-view">
         <button @click="clearSelected" id="back-btn">Back</button>
-        <section>
-          <ViewResponsiveTable v-if="responsiveTableSelected" />
-          <p v-else>To Do: Add this project</p>
-        </section>
+        <ViewResponsiveTable v-if="responsiveTableSelected" />
+        <p v-else>To Do: Add this project</p>
       </article>
     </transition>
   </main>
