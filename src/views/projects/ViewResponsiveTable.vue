@@ -39,11 +39,11 @@
         <h4>Dogs</h4>
         <table>
           <thead>
-          <th v-for="(header, index) in data.headers" :key="`header-${index}`">{{ header }}</th>
-        </thead>
-        <tbody>
-          <tr v-for="(row, index) in data.body" :key="`row-${index}`">
-            <td v-for="(entry, index) in row" :key="`data-${index}`">{{ entry }}</td>
+            <th v-for="(header, index) in data.headers" :key="`header-${index}`">{{ header }}</th>
+          </thead>
+          <tbody>
+            <tr v-for="(row, index) in data.body" :key="`row-${index}`">
+              <td v-for="(entry, index) in row" :key="`data-${index}`">{{ entry }}</td>
             </tr>
           </tbody>
         </table>
@@ -61,15 +61,15 @@ export default {
   data() {
     return {
       data: {
-        title: "Responsive Table",
-        headers: ["Name", "Breed", "Favorite Toy"],
+        title: "Dogs",
+        headers: ["Name", "Breed", "Age", "Favorite Toy"],
         body: [
-          ["Frank Frank", "Golden Retriever", "Sprinklers"],
-          ["Tucker", "Bichon Frise", "His brother"],
-          ["Champ", "Bichon Frise", "Squirrels"],
-          ["Django", "Border Collie Mix", "Frisbee"],
-          ["Frou Frou", "Havanese", "Left pink sock"],
-          ["Miles", "Pitbull Mix", "A ragged chew toy"]
+          ["Frank Frank", "Golden Retriever", "1", "He likes romping through sprinklers and biting the water."],
+          ["Tucker", "Bichon Frise", "16", "His brother. They fight and sneeze at each other constantly, but it's all in good fun."],
+          ["Champ", "Bichon Frise", "13", "Squirrels. Or perhaps he's just conditioned to the sound of your voice. \"Banana! Is there a banana outside the window, boy?\""],
+          ["Django", "Border Collie Mix", "6mo", "Frisbee. He chased it like it was nobody's business."],
+          ["Frou Frou", "Havanese", "8", "Left pink sock. Maybe the right ones smell wrong."],
+          ["Miles", "Pitbull Mix", "4", "A ragged chew toy. It's the first one we ever gave him and the only one he'll touch."]
         ]
       },
       showThresholdTip: false,
