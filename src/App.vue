@@ -44,6 +44,13 @@ a:hover {
   padding-bottom: 0.25rem;
 }
 
+button {
+  border: none;
+  color: white;
+  background-color: purple;
+  padding: 0.5rem 1rem;
+}
+
 h1 {
   margin: 0 0 2rem 0;
 }
@@ -88,10 +95,8 @@ ul {
   align-items: center;
 }
 
-button {
-  border: none;
-  color: white;
-  background-color: purple;
-  padding: 0.5rem 1rem;
+.mb-1 {
+  margin-bottom: 1rem;
 }
+
 </style>

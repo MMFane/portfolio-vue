@@ -1,6 +1,6 @@
 <template>
   <div class="rtable">
-    <h2 v-if="data.title">{{ data.title }}</h2>
+    <DynamicHeader v-if="data.title" :level="headerLevel">{{ data.title }}</DynamicHeader>
     <Table v-if="!smallScreen" :body="body" :headers="headers" :striped="striped" />
     <Cards v-else :body="body" :headers="headers" :striped="striped" />
   </div>
@@ -8,10 +8,13 @@
 <script>
 import Table from "./Table.vue";
 import Cards from "./Cards.vue";
+import DynamicHeader from "../utility/DynamicHeader.vue";
+
 export default {
   name: "responsive-table",
   components: {
     Cards,
+    DynamicHeader,
     Table
   },
   data() {
@@ -38,6 +41,10 @@ export default {
       type: Object,
       required: true
     },
+    headerLevel: {
+      type: Number,
+      default: 2
+    },
     striped: {
       type: Boolean,
       default: false
@@ -53,6 +60,9 @@ export default {
 <style lang="css">
 .rtable {
   margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .rtable p {
