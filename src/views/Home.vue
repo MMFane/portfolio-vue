@@ -14,10 +14,11 @@
           </li>
         </ul>
       </section>
-      <article id="project" v-else key="project-view">
+      <article v-else id="project" key="project-view">
         <button @click="clearSelected" id="back-btn">Back</button>
-        <ViewResponsiveTable v-if="responsiveTableSelected" />
-        <p v-else>To Do: Add this project</p>
+        <ViewFillableVectorGraphic v-if="whichProjectSelected === 'vector'" />
+        <ViewFormUX v-if="whichProjectSelected === 'form'" />
+        <ViewResponsiveTable v-if="whichProjectSelected === 'table'" />
       </article>
     </transition>
   </main>
@@ -25,6 +26,8 @@
 
 <script>
 import ProjectThumb from "@/components/ProjectThumbnail.vue";
+import ViewFillableVectorGraphic from "@/views/projects/ViewFillableVectorGraphic.vue"
+import ViewFormUX from "@/views/projects/ViewFormUX.vue"
 import ViewResponsiveTable from "@/views/projects/ViewResponsiveTable.vue";
 import Projects from "@/assets/projects.json";
 
@@ -32,16 +35,16 @@ export default {
   name: "Home",
   components: {
     ProjectThumb,
+    ViewFillableVectorGraphic,
+    ViewFormUX,
     ViewResponsiveTable
   },
   computed: {
     projectSelected() {
       return this.selectedProject !== null;
     },
-    responsiveTableSelected() {
-      return (
-        this.projects[this.selectedProject].name === "Responsive Table Design"
-      );
+    whichProjectSelected() {
+      return this.projects[this.selectedProject].shortname
     }
   },
   data() {

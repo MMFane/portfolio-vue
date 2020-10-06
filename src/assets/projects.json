@@ -1,11 +1,14 @@
 [
   {
-    "name": "Fillable Vector Graphic"
+    "name": "Fillable Vector Graphic",
+    "shortname": "vector"
   },
   {
-    "name": "Responsive Table Design"
+    "name": "Responsive Table Design",
+    "shortname": "table"
   },
   {
-    "name": "Form UX"
+    "name": "Form UX",
+    "shortname": "form"
   }
 ]
