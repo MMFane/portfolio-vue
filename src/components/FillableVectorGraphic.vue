@@ -1,6 +1,7 @@
 <template>
   <article>
     <p>Sam is filled to {{ displayPercent }}%</p>
+    <input type="number" :min="0" :max="1" placeholder="%" :step="0.01" v-model="percentage"/>
     <div id="svg">
       <Colors :alt="`Sam is filled to ${ displayPercent }`"/>
       <svg id="mask" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 408 512" :style="maskCSS">
